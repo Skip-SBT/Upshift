@@ -6,14 +6,14 @@ const theme = createTheme({
             main: '#000000',
         },
         secondary: {
-            main: '#ffffff',
+            main: '#9abefd',
         },
         link: {
             main: '#ffffff',
         },
     },
     typography: {
-        fontFamily: 'Georgia, Serif, serif',
+        fontFamily: 'Calibri, sans-serif',
     },
     components: {
         MuiLink: {

@@ -1,0 +1,50 @@
+.offer-item {
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 90%;
+    text-align: left;
+    margin: 0 auto;
+
+    .offer-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .offer-image {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .offer-description {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .offer-dropdown {
+        margin-bottom: 1rem;
+
+        .offer-dropdown-button {
+            text-transform: none;
+            font-size: 18px;
+            padding: 0;
+            margin-bottom: 8px;
+        }
+
+        .offer-dropdown-text {
+            font-size: 18px;
+            color: #666;
+        }
+    }
+
+    .offer-button {
+        height: 40px;
+        padding: 12px 24px;
+        font-size: 18px;
+        text-transform: none;
+        color: white;
+        border-radius: 7px;
+    }
+}

@@ -1,0 +1,84 @@
+@import "variables";
+.app-bar {
+  color: $base-font-color !important;
+  background-color: white !important;
+  box-shadow: none !important;
+  height: 10vh;
+
+  .app-container {
+    max-width: 100%;
+  }
+}
+
+.logo-md {
+  display: none;
+
+  @media (min-width: 960px) {
+    display: flex;
+  }
+}
+
+.mobile-menu-section {
+  flex-grow: 1;
+  display: flex;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.hamburger-menu {
+  color: $base-font-color;
+}
+
+.mobile-menu {
+  display: block;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.mobile-menu-item {
+  text-align: center;
+}
+
+.mobile-menu-text {
+  color: black;
+}
+
+.logo-xs {
+  margin-right: 1rem;
+  display: flex;
+  flex-grow: 1;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  color: inherit;
+
+  @media (min-width: 960px) {
+    display: none;
+  }
+}
+
+.nav-pages-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+
+  .nav-page-button {
+    margin: 2rem 0.9rem;
+    color: $base-font-color;
+    display: block;
+
+    &:last-child {
+      background-color: #9abefd;
+      color: white;
+    }
+  }
+}

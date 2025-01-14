@@ -1,0 +1,21 @@
+.offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 16px;
+
+    .offer-item {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+        .offer-item {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+}

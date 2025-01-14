@@ -1,7 +1,14 @@
-.App {
+@import "nav";
+@import "showCase";
+@import "offer";
+
+
+.app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    max-width: 80vw;
+    margin: 0 auto
 }
 
 main {
