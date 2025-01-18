@@ -6,6 +6,7 @@ import Navigation from './Components/Navigation';
 import ShowCase from './Components/ShowCase';
 import OfferContent from './Components/OfferContent';
 import Box from '@mui/material/Box';
+import InfoBlock from './Components/InfoBlock';
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
                 <Navigation/>
                 <ShowCase/>
                 <OfferContent/>
+                <InfoBlock/>
             </Box>
         </ThemeProvider>
     );

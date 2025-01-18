@@ -1,0 +1,113 @@
+@import "variables";
+.info-section {
+  padding: 60px 20px 0 20px;
+  font-weight: 500 !important;
+
+  .info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    color: $base-font-color;
+    font-size: 1.5rem;
+    width: 100%;
+
+    .info-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+      width: 100%;
+      gap: 1rem;
+      .info-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        padding: 1rem;
+        border-radius: 8px;
+        flex: 0 1 calc(50% - 9rem);
+
+        .info-box-icon {
+          font-size: 24px;
+          color: white;
+          background-color: #9a9aa0;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: flex-start;
+          margin-bottom: 1rem;
+          margin-left: 20px;
+          flex: 0 1 calc(50% - 1rem);
+          min-height: auto;
+
+
+          .info-box-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            color: black;
+            width: 100%;
+          }
+
+          .info-box-description {
+            font-size: 1rem;
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .info-boxes {
+        .info-box {
+          flex: 1 1 calc(50% - 0.5rem);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      .info-boxes {
+        gap: 0;
+
+        .info-box {
+          flex: 1 1 100%;
+          padding: 10px;
+
+          .info-box-title {
+            margin: 0;
+            font-size: 1rem;
+          }
+
+          .info-box-description {
+            font-size: 0.9rem;
+          }
+
+          .info-box-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .info-container {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+}

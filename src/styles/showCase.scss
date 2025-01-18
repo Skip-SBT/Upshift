@@ -14,7 +14,6 @@
     overflow: hidden;
 
     .title {
-
         color: $title-font-color;
         text-align: left;
         span {
@@ -25,16 +24,18 @@
     }
 
     .description {
-        margin-top: 10%;
         max-width: 30%;
         font-size: 1.2rem;
         color: $base-font-color;
         text-align: left;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .info-button {
         box-shadow: none;
-        margin-top: 10%;
+        margin-top: auto;
+        margin-bottom: 1rem;
         padding: 1rem;
         letter-spacing: 1px;
         font-size: 25px;

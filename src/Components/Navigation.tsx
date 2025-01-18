@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import Logo from '../images/logo.png';
 
 const pages = ['Home', 'Angebote', 'Über uns', 'Blog', 'Kontakt'];
 export default function Navigation() {
@@ -27,7 +28,7 @@ export default function Navigation() {
             <Container className='app-container'>
                 <Toolbar disableGutters>
                     <Typography variant="h6" className="logo-md">
-                        LOGO
+                        <img src={Logo} alt="Logo" className="logo-image" />
                     </Typography>
 
                     <Box className="mobile-menu-section">
@@ -72,7 +73,7 @@ export default function Navigation() {
                         href="#app-bar-with-responsive-menu"
                         className="logo-xs"
                     >
-                        UPSHIFT
+                        <img src={Logo} alt="Logo" className="logo-image-mobile" />
                     </Typography>
 
                     <Box className="nav-pages-section">
