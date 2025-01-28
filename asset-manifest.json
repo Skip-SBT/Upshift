@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Skip-SBT/Upshift/static/css/main.67bfca23.css",
-    "main.js": "/Skip-SBT/Upshift/static/js/main.1d22fa43.js",
+    "main.js": "/Skip-SBT/Upshift/static/js/main.7b87467b.js",
     "static/js/488.de8ab93a.chunk.js": "/Skip-SBT/Upshift/static/js/488.de8ab93a.chunk.js",
     "static/media/tennis.jpg": "/Skip-SBT/Upshift/static/media/tennis.68c93cdb9dcd20b72442.jpg",
     "static/media/people.jpg": "/Skip-SBT/Upshift/static/media/people.1b5643133a9d260567a5.jpg",
@@ -16,11 +16,11 @@
     "static/media/slick.woff": "/Skip-SBT/Upshift/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Skip-SBT/Upshift/index.html",
     "main.67bfca23.css.map": "/Skip-SBT/Upshift/static/css/main.67bfca23.css.map",
-    "main.1d22fa43.js.map": "/Skip-SBT/Upshift/static/js/main.1d22fa43.js.map",
+    "main.7b87467b.js.map": "/Skip-SBT/Upshift/static/js/main.7b87467b.js.map",
     "488.de8ab93a.chunk.js.map": "/Skip-SBT/Upshift/static/js/488.de8ab93a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.67bfca23.css",
-    "static/js/main.1d22fa43.js"
+    "static/js/main.7b87467b.js"
   ]
 }
