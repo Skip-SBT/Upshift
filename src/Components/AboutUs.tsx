@@ -8,7 +8,7 @@ import EmailIcon from '@mui/icons-material/Email';
 
 export default function AboutUs() {
     return (
-        <Box className='about-us-section'>
+        <Box className='about-us-section' id='about-us'>
             <Typography variant='h3' className='info-title'>Über uns</Typography>
             <Box className='about-us-container'>
                 <Box className='image-content'>

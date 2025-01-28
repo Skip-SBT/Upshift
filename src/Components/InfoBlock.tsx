@@ -49,7 +49,7 @@ export default function InfoBlock() {
 
 
     return (
-        <Box className='info-section'>
+        <Box className='info-section' id='info'>
             <Typography variant='h3' className='info-title'>Was uns ausmacht</Typography>
             <Box className='info-container'>
                 <Box className={'info-boxes'}>

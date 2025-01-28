@@ -41,7 +41,7 @@ const offers = [
 
 export default function OfferContent() {
     return (
-        <Box className='offer-content'>
+        <Box className='offer-content' id="offer">
             <Typography variant='h3' className='offer-content-title'>
                 Angebot
             </Typography>

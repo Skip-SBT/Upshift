@@ -11,7 +11,20 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../images/logo.png';
 
-const pages = ['Home', 'Angebote', 'Über uns', 'Blog', 'Kontakt'];
+const pages = [
+    {name: 'Home', id: 'home'},
+    {name: 'Angebote', id: 'offer'},
+    {name: 'Über uns', id: 'about-us'},
+    {name: 'Was uns ausmacht', id: 'info'},
+    {name: 'Kontakt', id: 'kontakt'},
+];
+
+const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+};
 export default function Navigation() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
@@ -28,7 +41,7 @@ export default function Navigation() {
             <Container className='app-container'>
                 <Toolbar disableGutters>
                     <Typography variant="h6" className="logo-md">
-                        <img src={Logo} alt="Logo" className="logo-image" />
+                        <img src={Logo} alt="Logo" className="logo-image"/>
                     </Typography>
 
                     <Box className="mobile-menu-section">
@@ -40,7 +53,7 @@ export default function Navigation() {
                             onClick={handleOpenNavMenu}
                             className="hamburger-menu"
                         >
-                            <MenuIcon />
+                            <MenuIcon/>
                         </IconButton>
                         <Menu
                             id="menu-appbar"
@@ -59,8 +72,15 @@ export default function Navigation() {
                             className="mobile-menu"
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu} className="mobile-menu-item">
-                                    <Typography className="mobile-menu-text">{page}</Typography>
+                                <MenuItem
+                                    key={page.id}
+                                    onClick={() => {
+                                        handleScroll(page.id);
+                                        handleCloseNavMenu();
+                                    }}
+                                    className="mobile-menu-item"
+                                >
+                                    <Typography className="mobile-menu-text">{page.name}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
@@ -73,17 +93,20 @@ export default function Navigation() {
                         href="#app-bar-with-responsive-menu"
                         className="logo-xs"
                     >
-                        <img src={Logo} alt="Logo" className="logo-image-mobile" />
+                        <img src={Logo} alt="Logo" className="logo-image-mobile"/>
                     </Typography>
 
                     <Box className="nav-pages-section">
                         {pages.map((page) => (
                             <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
+                                key={page.id}
+                                onClick={() => {
+                                    handleScroll(page.id);
+                                    handleCloseNavMenu();
+                                }}
                                 className="nav-page-button"
                             >
-                                {page}
+                                {page.name}
                             </Button>
                         ))}
                     </Box>
