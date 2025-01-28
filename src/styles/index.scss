@@ -3,6 +3,11 @@
 @import "offer";
 @import 'infoSection';
 @import "aboutUs";
+@import "comment";
+
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
 
 .app {
     display: flex;
