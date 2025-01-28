@@ -14,8 +14,8 @@ import Logo from '../images/logo.png';
 const pages = [
     {name: 'Home', id: 'home'},
     {name: 'Angebote', id: 'offer'},
-    {name: 'Über uns', id: 'about-us'},
     {name: 'Was uns ausmacht', id: 'info'},
+    {name: 'Über uns', id: 'about-us'},
     {name: 'Kontakt', id: 'kontakt'},
 ];
 
@@ -80,7 +80,7 @@ export default function Navigation() {
                                     }}
                                     className="mobile-menu-item"
                                 >
-                                    <Typography className="mobile-menu-text">{page.name}</Typography>
+                                    <Typography className="mobile-menu-text" variant='body1'>{page.name}</Typography>
                                 </MenuItem>
                             ))}
                         </Menu>

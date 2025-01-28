@@ -14,7 +14,7 @@
 .logo-md {
   display: none;
 
-  @media (min-width: 960px) {
+  @media (min-width: $min-mobile-width) {
     display: flex;
   }
 }
@@ -23,7 +23,7 @@
   flex-grow: 1;
   display: flex;
 
-  @media (min-width: 960px) {
+  @media (min-width: $min-mobile-width) {
     display: none;
   }
 }
@@ -35,7 +35,7 @@
 .mobile-menu {
   display: block;
 
-  @media (min-width: 960px) {
+  @media (min-width: $min-mobile-width) {
     display: none;
   }
 }
@@ -58,7 +58,7 @@
   text-decoration: none;
   color: inherit;
 
-  @media (min-width: 960px) {
+  @media (min-width: $min-mobile-width) {
     display: none;
   }
 }
@@ -68,7 +68,7 @@
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: 960px) {
+  @media (max-width: $min-mobile-width) {
     display: none;
   }
 
@@ -76,7 +76,7 @@
     margin: 2rem 0.9rem;
     color: $base-font-color;
     display: block;
-
+    font-size: 1.4rem;
     &:last-child {
       background-color: #9abefd;
       color: white;
@@ -90,7 +90,7 @@
   height: 50px;
 
 
-  @media (min-width: 960px) {
+  @media (min-width: $min-mobile-width) {
     display: none;
   }
 }
