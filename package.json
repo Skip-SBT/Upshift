@@ -1,5 +1,6 @@
 {
-  "name": "project-name",
+  "homepage": "https://github.com/Skip-SBT/Upshift",
+  "name": "upshift",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -22,6 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint:fix": "eslint . --fix",
@@ -50,6 +53,7 @@
     "@types/react-slick": "^0.23.13",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4",
     "style-loader": "^4.0.0"
