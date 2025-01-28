@@ -43,7 +43,7 @@ export default function SingleOffer({
                     {isDropdownOpen ? 'Weniger anzeigen' : 'Module ansehen >'}
                 </Button>
                 {isDropdownOpen && (
-                    <Typography variant="body2" className="offer-dropdown-text">
+                    <Typography variant="body1" className="offer-dropdown-text">
                         {dropdownText}
                     </Typography>
                 )}

@@ -14,6 +14,28 @@ const theme = createTheme({
     },
     typography: {
         fontFamily: 'Calibri, sans-serif',
+        h1: {
+            fontSize: 70,
+        },
+        h2: {
+            fontSize: 60,
+        },
+        h3: {
+            fontSize: 50,
+        },
+        h4: {
+            fontSize: 40,
+        },
+        h5: {
+            fontSize: 25,
+        },
+        body1: {
+            fontSize: 25,
+        },
+        body2: {
+            fontSize: 20,
+        }
+
     },
     components: {
         MuiLink: {

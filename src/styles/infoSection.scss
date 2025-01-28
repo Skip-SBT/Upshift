@@ -25,7 +25,7 @@
         align-items: start;
         padding: 1rem;
         border-radius: 8px;
-        flex: 0 1 calc(50% - 9rem);
+        flex: 0 1 calc(50% - 5rem);
 
         .info-box-icon {
           font-size: 24px;
@@ -47,12 +47,11 @@
           align-items: flex-start;
           margin-bottom: 1rem;
           margin-left: 20px;
-          flex: 0 1 calc(50% - 1rem);
+          flex: 0 1 calc(50% + 10rem);
           min-height: auto;
 
 
           .info-box-title {
-            font-size: 1.2rem;
             font-weight: bold;
             margin-top: 5px;
             margin-bottom: 10px;
@@ -61,7 +60,6 @@
           }
 
           .info-box-description {
-            font-size: 1rem;
             margin: 0;
             width: 100%;
           }

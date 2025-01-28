@@ -1,0 +1,39 @@
+@import "variables";
+
+.about-us-section {
+  .about-us-container {
+    display: flex;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .image-content {
+      flex: 1 0 35%;
+
+      .icon {
+        svg {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .text-content {
+      flex: 2 0 60%;
+      color: $base-font-color;
+      .about-us-title {
+        color: $title-font-color;
+        font-weight: bold;
+      }
+      .about-us-description {
+        width: 80%;
+      }
+    }
+
+    .profile-image {
+      width: 100%;
+      height: auto;
+
+    }
+  }
+}
