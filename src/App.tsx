@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import InfoBlock from './Components/InfoBlock';
 import AboutUs from './Components/AboutUs';
 import Comments from './Components/Comments';
+import Footer from "./Components/Footer";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                 <InfoBlock/>
                 <AboutUs/>
                 <Comments/>
+                <Footer/>
             </Box>
         </ThemeProvider>
     );
