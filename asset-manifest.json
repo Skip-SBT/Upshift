@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Upshift/static/css/main.ef13b1d3.css",
+    "main.css": "/Upshift/static/css/main.b92efa0c.css",
     "main.js": "/Upshift/static/js/main.e83124c7.js",
     "static/js/488.de8ab93a.chunk.js": "/Upshift/static/js/488.de8ab93a.chunk.js",
+    "static/media/showCaseImage.jpg": "/Upshift/static/media/showCaseImage.4b84c1af3be555ce4317.jpg",
     "static/media/tennis.jpg": "/Upshift/static/media/tennis.68c93cdb9dcd20b72442.jpg",
     "static/media/people.jpg": "/Upshift/static/media/people.1b5643133a9d260567a5.jpg",
     "static/media/scale.jpg": "/Upshift/static/media/scale.2a518eb2d315e3a96b44.jpg",
     "static/media/paper.jpg": "/Upshift/static/media/paper.03a81b578b9f07b5df98.jpg",
-    "static/media/showCaseImage.png": "/Upshift/static/media/showCaseImage.7117c08a77a1b1c1b5c1.png",
     "static/media/RominaSuppa.png": "/Upshift/static/media/RominaSuppa.0f9243fd9a110ed6577b.png",
     "static/media/MarcelMeier.png": "/Upshift/static/media/MarcelMeier.da3eeb29fb817b1ddf33.png",
     "static/media/slick.svg": "/Upshift/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -15,12 +15,12 @@
     "static/media/slick.ttf": "/Upshift/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Upshift/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Upshift/index.html",
-    "main.ef13b1d3.css.map": "/Upshift/static/css/main.ef13b1d3.css.map",
+    "main.b92efa0c.css.map": "/Upshift/static/css/main.b92efa0c.css.map",
     "main.e83124c7.js.map": "/Upshift/static/js/main.e83124c7.js.map",
     "488.de8ab93a.chunk.js.map": "/Upshift/static/js/488.de8ab93a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef13b1d3.css",
+    "static/css/main.b92efa0c.css",
     "static/js/main.e83124c7.js"
   ]
 }
