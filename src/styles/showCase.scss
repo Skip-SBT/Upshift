@@ -6,7 +6,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     height: 70vh;
-    background-image: url("../images/showCaseImage.png");
+    background-image: url("../images/showCaseImage.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,51 +46,70 @@
         cursor: pointer;
     }
 
-    @media (max-width: 768px) {
-        height: auto;
-        padding: 1rem;
+    @media (max-width: 1024px) {
+        padding: 2rem;
+        gap: 1rem;
 
         .title {
-            font-size: 1.5rem;
             span {
-                font-size: 1.3rem;
+                font-size: 3.5rem;
             }
         }
 
         .description {
-            margin-top: 50px;
-            max-width: 100%;
+            max-width: 60%;
             font-size: 1rem;
         }
 
         .info-button {
-            margin-top: 50px;
             font-size: 20px;
-            padding: 0.8rem;
+            padding: 0.8rem 1.5rem;
         }
     }
 
-    @media (max-width: 480px) {
-        padding: 1rem;
+    @media (max-width: $min-mobile-width) {
         align-items: center;
-
+        text-align: center;
+        height: auto;
+        padding: 2rem 1.5rem;
+        background: linear-gradient(135deg, #ff7eb3, #1877d0); /* Subtle gradient instead of image */
         .title {
             text-align: center;
-            font-size: 1.2rem;
             span {
-                font-size: 1rem;
+                font-size: 2.5rem;
             }
         }
 
         .description {
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: 30px;
+            max-width: 90%;
+            font-size: 1rem;
+            color: black;
+
         }
 
         .info-button {
             font-size: 18px;
-            padding: 0.6rem;
+            padding: 0.8rem 1.2rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 1.5rem;
+        gap: 1rem;
+
+        .title {
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        .description {
+            font-size: 0.9rem;
+        }
+
+        .info-button {
+            font-size: 16px;
+            padding: 0.6rem 1rem;
         }
     }
 }
