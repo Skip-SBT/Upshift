@@ -1,7 +1,7 @@
-@import "variables";
+@use "variables";
 
 .app-bar {
-  color: $base-font-color !important;
+  color: variables.$base-font-color !important;
   background-color: white !important;
   box-shadow: none !important;
   height: 10vh;
@@ -14,7 +14,7 @@
 .logo-md {
   display: none;
 
-  @media (min-width: $min-mobile-width) {
+  @media (min-width: variables.$min-mobile-width) {
     display: flex;
   }
 }
@@ -23,19 +23,19 @@
   flex-grow: 1;
   display: flex;
 
-  @media (min-width: $min-mobile-width) {
+  @media (min-width: variables.$min-mobile-width) {
     display: none;
   }
 }
 
 .hamburger-menu {
-  color: $base-font-color;
+  color: variables.$base-font-color;
 }
 
 .mobile-menu {
   display: block;
 
-  @media (min-width: $min-mobile-width) {
+  @media (min-width: variables.$min-mobile-width) {
     display: none;
   }
 }
@@ -58,7 +58,7 @@
   text-decoration: none;
   color: inherit;
 
-  @media (min-width: $min-mobile-width) {
+  @media (min-width: variables.$min-mobile-width) {
     display: none;
   }
 }
@@ -68,13 +68,13 @@
   display: flex;
   justify-content: flex-end;
 
-  @media (max-width: $min-mobile-width) {
+  @media (max-width: variables.$min-mobile-width) {
     display: none;
   }
 
   .nav-page-button {
     margin: 2rem 0.9rem;
-    color: $base-font-color;
+    color: variables.$base-font-color;
     display: block;
     font-size: 1.4rem;
     &:last-child {
@@ -90,7 +90,7 @@
   height: 50px;
 
 
-  @media (min-width: $min-mobile-width) {
+  @media (min-width: variables.$min-mobile-width) {
     display: none;
   }
 }

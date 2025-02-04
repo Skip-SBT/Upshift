@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .about-us-section {
   .about-us-container {
@@ -20,9 +20,9 @@
 
     .text-content {
       flex: 2 0 60%;
-      color: $base-font-color;
+      color: variables.$base-font-color;
       .about-us-title {
-        color: $title-font-color;
+        color: variables.$title-font-color;
         font-weight: bold;
       }
       .about-us-description {

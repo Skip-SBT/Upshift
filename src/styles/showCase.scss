@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .show-case-container {
     display: flex;
@@ -14,7 +14,7 @@
     overflow: hidden;
 
     .title {
-        color: $title-font-color;
+        color: variables.$title-font-color;
         text-align: left;
         span {
             display: block;
@@ -26,7 +26,7 @@
     .description {
         max-width: 30%;
         font-size: 1.2rem;
-        color: $base-font-color;
+        color: variables.$base-font-color;
         text-align: left;
         margin-top: auto;
         margin-bottom: auto;
@@ -67,7 +67,7 @@
         }
     }
 
-    @media (max-width: $min-mobile-width) {
+    @media (max-width: variables.$min-mobile-width) {
         align-items: center;
         text-align: center;
         height: auto;

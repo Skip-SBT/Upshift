@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 
 .footer {
   padding: 2rem;
@@ -79,7 +79,7 @@
     color: #6c757d;
   }
 
-  @media (min-width: $min-mobile-width) {
+  @media (min-width: variables.$min-mobile-width) {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
