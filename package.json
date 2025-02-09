@@ -41,7 +41,7 @@
     "stats": "gulp stats",
     "build:dev": "gulp build:dev",
     "build:prod": "gulp build:prod",
-    "build": "gulp clean && npx webpack --config webpack.config.js && gulp styles && gulp html",
+    "build": "npx webpack --config webpack.config.js",
     "check:eslint": "gulp eslint",
     "check:eslint:fix": "gulp eslint:fix",
     "check:stylelint": "gulp stylelint",
