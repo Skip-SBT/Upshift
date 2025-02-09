@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Upshift/static/css/main.b92efa0c.css",
-    "main.js": "/Upshift/static/js/main.e83124c7.js",
+    "main.js": "/Upshift/static/js/main.423d14c5.js",
     "static/js/488.de8ab93a.chunk.js": "/Upshift/static/js/488.de8ab93a.chunk.js",
     "static/media/showCaseImage.jpg": "/Upshift/static/media/showCaseImage.4b84c1af3be555ce4317.jpg",
     "static/media/tennis.jpg": "/Upshift/static/media/tennis.68c93cdb9dcd20b72442.jpg",
@@ -16,11 +16,11 @@
     "static/media/slick.woff": "/Upshift/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Upshift/index.html",
     "main.b92efa0c.css.map": "/Upshift/static/css/main.b92efa0c.css.map",
-    "main.e83124c7.js.map": "/Upshift/static/js/main.e83124c7.js.map",
+    "main.423d14c5.js.map": "/Upshift/static/js/main.423d14c5.js.map",
     "488.de8ab93a.chunk.js.map": "/Upshift/static/js/488.de8ab93a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b92efa0c.css",
-    "static/js/main.e83124c7.js"
+    "static/js/main.423d14c5.js"
   ]
 }
