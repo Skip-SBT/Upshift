@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable  @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-interface */
 import { Palette, PaletteOptions } from '@mui/material/styles';
 
 declare module '@mui/material/styles' {

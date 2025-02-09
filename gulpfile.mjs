@@ -7,7 +7,6 @@ let {parallel, series} = gulp;
 
 let jsFiles = [
     'src',
-    'tests',
 ];
 
 let scssFiles = [
@@ -147,10 +146,6 @@ gulp.task('check:all', series(npmInstall, parallel(eslint, stylelint, spellcheck
 gulp.task('bump-version', bumpVersion);
 gulp.task('reset', series(rimrafAll, npmInstall));
 gulp.task('i18next', i18nextExtract);
-
-// Tests
-gulp.task('test', test);
-gulp.task('test:watch', testWatch);
 
 // Build tools
 gulp.task('build:dev', series(npmInstall, development, buildWebpack));

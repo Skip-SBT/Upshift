@@ -29,7 +29,7 @@ export default function SingleOffer({
             <Typography variant="h5" component="h2" className="offer-title">
                 {title}
             </Typography>
-            <img src={imageSrc} alt={title} className="offer-image"></img>
+            <img src={imageSrc} alt={title} className="offer-image" />
             <Typography variant="body1" className="offer-description">
                 {description}
             </Typography>

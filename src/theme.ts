@@ -34,7 +34,7 @@ const theme = createTheme({
         },
         body2: {
             fontSize: 20,
-        }
+        },
 
     },
     components: {
