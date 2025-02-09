@@ -6,19 +6,24 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js",
+        filename: "bundle.[contenthash].js",
         clean: true,
         assetModuleFilename: "images/[hash][ext][query]",
     },
     module: {
         rules: [
             {
-                test: /\.(js|jsx|ts|tsx)$/,
+                test: /\.(ts|tsx)$/,
+                exclude: /node_modules/,
+                use: "ts-loader",
+            },
+            {
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
-                        presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
+                        presets: ["@babel/preset-env", "@babel/preset-react"],
                     },
                 },
             },
@@ -54,6 +59,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./public/index.html",
             filename: "index.html",
+            inject: "body",
+            hash: true,
         }),
     ],
     devServer: {

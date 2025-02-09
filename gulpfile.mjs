@@ -1,67 +1,157 @@
-import gulp from "gulp";
-import browserSyncPkg from "browser-sync";
-import dartSass from "sass";
-import gulpSass from "gulp-sass";
-import { deleteAsync } from "del";
-import { spawn } from "child_process";
-import path from "path";
+import {execa} from 'execa';
+import {rimraf} from 'rimraf';
+import {gulp as i18nextParser} from 'i18next-parser';
+import gulp from 'gulp';
 
-const browserSync = browserSyncPkg.create();
-const sassCompiler = gulpSass(dartSass);
+let {parallel, series} = gulp;
 
-// Paths
-const paths = {
-    styles: "./src/styles/**/*.scss",
-    html: "./public/index.html",
-    dist: "./dist",
+let jsFiles = [
+    'src',
+    'tests',
+];
+
+let scssFiles = [
+    'src/**/*.scss',
+];
+
+let defaultExec = {
+    preferLocal: true,
 };
 
-// Clean Task
-gulp.task("clean", async () => {
-    await deleteAsync(["dist/**/*"]);
-});
+/** @type {string|null} */
+let currentMode = null;
 
-gulp.task("scripts", (done) => {
-    const webpackCliPath = path.resolve("node_modules/webpack-cli/bin/cli.js"); // Use webpack-cli
-
-    const webpackProcess = spawn(process.execPath, [webpackCliPath, "--config", "webpack.config.js"], { stdio: "inherit" });
-
-    webpackProcess.on("close", (code) => {
-        if (code !== 0) {
-            console.error("❌ Webpack build failed!");
-            done(new Error("Webpack process failed"));
-        } else {
-            console.log("✅ Webpack build completed!");
-            done();
-        }
+function rimrafPromise(path, options = {}) {
+    return new Promise((resolve, reject) => {
+        rimraf(path, options, err => {
+            if (err) {
+                reject(err);
+            }
+            else {
+                resolve();
+            }
+        });
     });
-});
+}
 
-// SCSS Compilation Task
-gulp.task("styles", () => {
+/**
+ * @param {string} mode
+ *
+ * @return {Function}
+ */
+function setMode(mode) {
+    if (currentMode !== null) {
+        throw new Error('Cannot set mode a second time, it is not safe!');
+    }
+    currentMode = mode;
+}
+
+function production(done) {
+    setMode('production');
+    done();
+}
+
+function development(done) {
+    setMode('development');
+    done();
+}
+
+/**
+ * @return {string}
+ */
+function getMode() {
+    if (currentMode === null) {
+        throw new Error('No mode has been set');
+    }
+    return currentMode;
+}
+
+async function npmInstall() {
+    await execa('npm', ['install', '--frozen-lockfile', '--silent'], {...defaultExec, stdio: 'inherit'});
+}
+
+async function runDevelopmentServer() {
+    await execa('webpack', ['server', '--mode=development', '--progress'], {...defaultExec, stdio: 'inherit'});
+}
+
+async function createStats() {
+    await execa('webpack', ['--mode=production', '--profile', '--json', 'stats.json'], defaultExec);
+    await execa('webpack-bundle-analyzer', ['-m', 'static', '-O', '-r', 'stats.html', 'stats.json'], defaultExec);
+}
+
+async function eslint() {
+    await execa('eslint', ['--max-warnings', '0', '--color', ...jsFiles], defaultExec);
+}
+
+async function eslintFix() {
+    await execa('eslint', ['--fix', '--max-warnings', '0', '--color', ...jsFiles], defaultExec);
+}
+
+async function stylelint() {
+    await execa('stylelint', ['--color', '--report-needless-disables', '--report-invalid-scope-disables', ...scssFiles], defaultExec);
+}
+
+async function stylelintFix() {
+    await execa('stylelint', ['--fix', '--color', '--report-needless-disables', '--report-invalid-scope-disables', ...scssFiles], defaultExec);
+}
+
+async function spellcheck() {
+    await execa('cspell', ['--no-progress', '--color'], defaultExec);
+}
+
+async function test() {
+    await execa('jest', ['--color'], defaultExec);
+}
+
+async function testWatch() {
+    await execa('jest', ['--watchAll'], {...defaultExec, stdio: 'inherit'});
+}
+
+async function rimrafAll() {
+    await rimrafPromise('dist');
+    await rimrafPromise('node_modules');
+}
+
+async function bumpVersion() {
+    await execa('node', ['bump-version.js'], {...defaultExec, stdio: 'inherit'});
+}
+
+// Generic building of webpack bundle, these are sensitive to BROWSERSLIST_ENV
+
+async function buildWebpack() {
+    await execa('webpack', ['--mode=' + getMode()], defaultExec);
+}
+
+function i18nextExtract() {
     return gulp
-        .src(paths.styles)
-        .pipe(sassCompiler().on("error", sassCompiler.logError))
-        .pipe(gulp.dest(paths.dist + "/styles"))
-        .pipe(browserSync.stream());
-});
+        .src('src/**')
+        .pipe(
+            new i18nextParser({
+                locales: ['de', 'en'],
+                output:  'src/translation/$LOCALE-$NAMESPACE.json',
+            }),
+        )
+        .pipe(gulp.dest('./'));
+};
 
-// Copy HTML to dist
-gulp.task("html", () => {
-    return gulp.src(paths.html).pipe(gulp.dest(paths.dist)).pipe(browserSync.stream());
-});
+// Dev tools
+gulp.task('npm:install', npmInstall);
+gulp.task('start', series(npmInstall, runDevelopmentServer));
+gulp.task('stats', series(npmInstall, createStats));
+gulp.task('eslint', eslint);
+gulp.task('eslint:fix', eslintFix);
+gulp.task('stylelint', stylelint);
+gulp.task('stylelint:fix', stylelintFix);
+gulp.task('spellcheck', spellcheck);
+gulp.task('check:all', series(npmInstall, parallel(eslint, stylelint, spellcheck, test)));
+gulp.task('bump-version', bumpVersion);
+gulp.task('reset', series(rimrafAll, npmInstall));
+gulp.task('i18next', i18nextExtract);
 
-// Watch Files
-gulp.task("watch", () => {
-    browserSync.init({
-        server: { baseDir: paths.dist },
-        port: 3000,
-    });
+// Tests
+gulp.task('test', test);
+gulp.task('test:watch', testWatch);
 
-    gulp.watch("./src/**/*.js", gulp.series("scripts"));
-    gulp.watch(paths.styles, gulp.series("styles"));
-    gulp.watch(paths.html, gulp.series("html"));
-});
-
-// Default Task
-gulp.task("default", gulp.series("clean", gulp.parallel("scripts", "styles", "html"), "watch"));
+// Build tools
+gulp.task('build:dev', series(npmInstall, development, buildWebpack));
+gulp.task('build:prod', series(npmInstall, production, buildWebpack));
