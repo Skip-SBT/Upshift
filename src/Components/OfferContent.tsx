@@ -26,14 +26,16 @@ const offers = [
     {
         title: 'Verkauf - Nachfolgeregelung',
         imageSrc: OfferImage3,
-        description: 'Wir begleiten Sie bei der Wertoptimierung Ihrer Firma - durch digitale Transformation und Kulturentwicklung und machen sie fit für die Zukunft.',
+        description: 'Wir begleiten Sie bei der Wertoptimierung Ihrer Firma - dur' +
+            'ch digitale Transformation und Kulturentwicklung und machen sie fit für die Zukunft.',
         dropdownText: 'Zusätzliche Informationen über Verkauf und Nachfolgeregelung.',
         buttonLabel: 'Anfragen',
     },
     {
         title: 'Workshop und Schulungen',
         imageSrc: OfferImage4,
-        description: 'Wir schulen mit echten Praxisbeispielen aus Ihrer Firma zu folgenden Themen: digitale Tools, agile Arbeitsmethodiken (Scrum), Design Thinking, OKRs, Priorisierung strategischer Initiativen, etc.',
+        description: 'Wir schulen mit echten Praxisbeispielen aus Ihrer Firma zu folgenden Themen' +
+            ': digitale Tools, agile Arbeitsmethodiken (Scrum), Design Thinking, OKRs, Priorisierung strategischer Initiativen, etc.',
         dropdownText: 'Zusätzliche Informationen über Workshops und Schulungen.',
         buttonLabel: 'Anfragen',
     },

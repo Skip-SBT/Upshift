@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables";
 .info-section {
   padding: 60px 20px 0 20px;
   font-weight: 500 !important;
@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    color: $base-font-color;
+    color: variables.$base-font-color;
     font-size: 1.5rem;
     width: 100%;
 

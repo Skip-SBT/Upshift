@@ -1,10 +1,10 @@
-@import "nav";
-@import "showCase";
-@import "offer";
-@import 'infoSection';
-@import "aboutUs";
-@import "comment";
-@import "footer";
+@forward "nav";
+@forward "showCase";
+@forward "offer";
+@forward 'infoSection';
+@forward "aboutUs";
+@forward "comment";
+@forward "footer";
 
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';

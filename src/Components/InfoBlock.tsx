@@ -11,7 +11,7 @@ export default function InfoBlock() {
             description: 'Wir denken Beratung neu: Durch\n' +
                 'digitale Tools und nachhaltige\n' +
                 'Strategien kombinieren wir Innovation\n' +
-                'mit greifbaren Ergebnissen'
+                'mit greifbaren Ergebnissen',
         },
         {
             number: 2,
@@ -19,7 +19,7 @@ export default function InfoBlock() {
             description: 'Wir begleiten Sie nicht nur strate-\n' +
                 'gisch, sondern packen mit an – für\n' +
                 'schnelle Erfolge und nachhaltige\n' +
-                'Transformation'
+                'Transformation',
         },
         {
             number: 3,
@@ -27,7 +27,7 @@ export default function InfoBlock() {
             description: 'Wir unterstützen Sie, kulturellen Wan-\n' +
                 'del und digitale Transformation durch\n' +
                 'gezielte Mitarbeiterentwicklung &\n' +
-                'Change-Management zu bewältigen'
+                'Change-Management zu bewältigen',
         },
         {
             number: 4,
@@ -35,7 +35,7 @@ export default function InfoBlock() {
             description: 'Flexibel und individuell: Mit einem\n' +
                 'Expertennetzwerk und skalierbaren\n' +
                 'Paketen passen wir unsere Beratung\n' +
-                'genau an Ihre Bedürfnisse an'
+                'genau an Ihre Bedürfnisse an',
         },
         {
             number: 5,
@@ -43,7 +43,7 @@ export default function InfoBlock() {
             description: 'Messbare Ergebnisse, klare Kosten:\n' +
                 'Mit transparenten Preisen und KPIs\n' +
                 'machen wir den Erfolg Ihrer\n' +
-                'Transformation greifbar.'
+                'Transformation greifbar.',
         },
     ];
 

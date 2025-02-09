@@ -17,7 +17,7 @@ interface OfferListProps {
 export default function OfferList({ offers }: OfferListProps) {
     return (
         <Box className="offer-list">
-            {offers.map((offer, index) => (
+            {offers.map((offer) => (
                 <SingleOffer
                     title={offer.title}
                     imageSrc={offer.imageSrc}

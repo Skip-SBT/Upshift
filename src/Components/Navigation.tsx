@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from '../images/logo.png';
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const pages = [
     {name: 'Home', id: 'home'},
@@ -95,6 +96,7 @@ export default function Navigation() {
                     >
                         <img src={Logo} alt="Logo" className="logo-image-mobile"/>
                     </Typography>
+                    <LanguageSwitcher/>
 
                     <Box className="nav-pages-section">
                         {pages.map((page) => (
